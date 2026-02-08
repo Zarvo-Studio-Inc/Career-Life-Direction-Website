@@ -17,9 +17,8 @@ export default function Header() {
       name: 'Services',
       href: '/services',
       sublinks: [
-        { name: 'Group Mentorship', href: '/technology-mentorship' },
-        { name: 'Scholarship', href: '/scholarships' },
-        { name: 'Career & Life Direction', href: '/career-life-direction' },
+        { name: 'Technology Mentorship', href: '/technology-mentorship' },
+        { name: 'Scholarship', href: '/scholarships' }
       ],
     },
     { name: 'Contact Us', href: '/contact' },

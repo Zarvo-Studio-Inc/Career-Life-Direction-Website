@@ -1,5 +1,7 @@
+
 import SectionContainer from '@/components/SectionContainer'
-import Link from 'next/link'
+import HeroSection from '@/components/HeroSection'
+import ReadyToStart from '@/components/ReadyToStart'
 
 export const metadata = {
   title: 'Scholarships - Zarvo Studio',
@@ -10,199 +12,188 @@ export default function Scholarships() {
   return (
     <>
       {/* Hero */}
-      <SectionContainer className="pt-16 md:pt-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="mb-6">Scholarship Guidance</h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Help with awareness, planning, and preparation for scholarship opportunities. 
-            We are not agents. We do not guarantee results.
-          </p>
+      <HeroSection
+        title="Scholarship Guidance"
+        description="Structured guidance for scholarship awareness, planning, and preparation. Honest advice, no agent-like behavior, no guarantees."
+      />
+
+      {/* What Scholarship Guidance Means */}
+      <SectionContainer noPadding={true} className="py-2">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl p-8 md:p-12 mb-8 w-full">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white text-2xl">🎓</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand">What Scholarship Guidance Means at Zarvo</h2>
+            </div>
+            <p className="text-brand-800 leading-relaxed mb-4">
+              Scholarship guidance at Zarvo is about awareness, planning, and preparation for competitive opportunities. We help you understand what exists, what is realistic, and how to prepare—without false promises or agent-like behavior.
+            </p>
+            <p className="text-brand-800 leading-relaxed mb-8">
+              We focus on honest advice, structured timelines, and realistic expectations. No shortcuts, no guarantees.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white/80 rounded-xl p-6 border border-brand/10 flex flex-col gap-2 items-center text-center">
+                <span className="text-3xl mb-2">📚</span>
+                <h4 className="font-semibold text-brand mb-1">Awareness Before Application</h4>
+                <p className="text-gray-700 text-sm">We help you discover scholarships you may be eligible for, before jumping into applications.</p>
+              </div>
+              <div className="bg-white/80 rounded-xl p-6 border border-brand/10 flex flex-col gap-2 items-center text-center">
+                <span className="text-3xl mb-2">🧭</span>
+                <h4 className="font-semibold text-brand mb-1">Structured Planning</h4>
+                <p className="text-gray-700 text-sm">We guide you in creating timelines, gathering documents, and preparing your profile.</p>
+              </div>
+              <div className="bg-white/80 rounded-xl p-6 border border-brand/10 flex flex-col gap-2 items-center text-center">
+                <span className="text-3xl mb-2">🔬</span>
+                <h4 className="font-semibold text-brand mb-1">Depth Over Breadth</h4>
+                <p className="text-gray-700 text-sm">We emphasize quality preparation for a few scholarships, not superficial applications to many.</p>
+              </div>
+              <div className="bg-white/80 rounded-xl p-6 border border-brand/10 flex flex-col gap-2 items-center text-center">
+                <span className="text-3xl mb-2">🚫</span>
+                <h4 className="font-semibold text-brand mb-1">No Guarantees</h4>
+                <p className="text-gray-700 text-sm">We do not guarantee results. We provide guidance, not outcomes.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </SectionContainer>
 
-      {/* Why Scholarship Guidance Matters */}
+      {/* What This Includes/Does Not Include */}
+      <SectionContainer noPadding={true} className="py-2">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-2xl p-8 md:p-12 bg-brand/5 mb-8 shadow-sm w-full">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white text-2xl">✅</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand">What Scholarship Guidance Includes</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white/80 rounded-xl p-6 border border-brand/10">
+                <h4 className="mb-3 font-semibold text-brand">What This Includes</h4>
+                <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                  <li className="flex items-start gap-2"><span className="text-brand-600">✔️</span> <span>Awareness of available scholarships and eligibility</span></li>
+                  <li className="flex items-start gap-2"><span className="text-brand-600">✔️</span> <span>Planning timelines and document requirements</span></li>
+                  <li className="flex items-start gap-2"><span className="text-brand-600">✔️</span> <span>Guidance on strengthening your profile</span></li>
+                  <li className="flex items-start gap-2"><span className="text-brand-600">✔️</span> <span>Honest feedback on your chances</span></li>
+                  <li className="flex items-start gap-2"><span className="text-brand-600">✔️</span> <span>Resource sharing: official sources, portals, info</span></li>
+                </ul>
+              </div>
+              <div className="bg-white/80 rounded-xl p-6 border border-red-100">
+                <h4 className="mb-3 font-semibold text-red-600">What This Does Not Include</h4>
+                <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                  <li className="flex items-start gap-2"><span className="text-red-500">✗</span> <span>We are not agents. We do not submit applications for you.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">✗</span> <span>No guarantees of acceptance or outcomes.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">✗</span> <span>We do not write essays or recommendation letters.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">✗</span> <span>No inside access or connections to committees.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-red-500">✗</span> <span>No commission-based fees or guarantees.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionContainer>
+
+      {/* Example Scholarship Tracks Timeline - Modern Style */}
       <SectionContainer>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">Why Scholarship Guidance Matters</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Many students and families are unaware of scholarship opportunities that could 
-            significantly reduce the cost of education. However, navigating scholarships 
-            requires awareness, planning, and realistic preparation.
+        <div className="relative max-w-3xl mx-auto">
+          <h2 className="mb-6 text-3xl md:text-4xl font-bold text-brand">Example Scholarship Tracks</h2>
+          <p className="text-brand-800 leading-relaxed mb-8 text-lg md:text-xl">
+            These are high-level examples of scholarship types and preparation tracks. Your actual roadmap will be tailored to your context.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            Zarvo Studio helps you understand what scholarships exist, what they require, 
-            and how to prepare—without false promises or agent-like behavior.
-          </p>
-        </div>
-      </SectionContainer>
-
-      {/* What We Cover */}
-      <SectionContainer className="bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">Types of Scholarships We Cover</h2>
-          <div className="space-y-6">
-            <div>
-              <h4 className="mb-2">Merit-Based Scholarships</h4>
-              <p className="text-gray-700">
-                Scholarships based on academic performance, test scores, or specific achievements. 
-                We help you understand eligibility and how to strengthen your application.
-              </p>
+          <div className="absolute left-5" style={{top: '120px', bottom: '80px'}}>
+            <div className="w-1 h-full bg-gradient-to-b from-brand via-brand-600 to-brand-800 rounded-full"></div>
+          </div>
+          <div className="space-y-16">
+            {/* Track 1 */}
+            <div className="relative flex items-start group">
+              <div className="z-10 flex flex-col items-center" style={{minWidth: '2.5rem'}}>
+                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-700 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">1</span>
+                </div>
+                <div className="w-1 flex-1 bg-brand/20"></div>
+              </div>
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-brand">Merit-Based Scholarships</h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">For students with strong academic performance, test scores, or achievements.</p>
+                  <ul className="text-sm text-gray-700 space-y-1 ml-2">
+                    <li>• Academic excellence</li>
+                    <li>• Test scores</li>
+                    <li>• Extracurricular achievements</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4 className="mb-2">Need-Based Scholarships</h4>
-              <p className="text-gray-700">
-                Financial aid based on family income and circumstances. We guide you through 
-                documentation and application requirements.
-              </p>
+            {/* Track 2 */}
+            <div className="relative flex items-start group">
+              <div className="z-10 flex flex-col items-center" style={{minWidth: '2.5rem'}}>
+                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-700 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">2</span>
+                </div>
+                <div className="w-1 flex-1 bg-brand/20"></div>
+              </div>
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-brand">Need-Based Scholarships</h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">For students who require financial aid based on family income and circumstances.</p>
+                  <ul className="text-sm text-gray-700 space-y-1 ml-2">
+                    <li>• Financial need</li>
+                    <li>• Documentation requirements</li>
+                    <li>• Application process</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4 className="mb-2">Country-Specific Scholarships</h4>
-              <p className="text-gray-700">
-                Scholarships offered by governments or universities in specific countries 
-                (e.g., Commonwealth Scholarships, Fulbright, DAAD, Chevening). We help you 
-                identify which ones match your profile.
-              </p>
-            </div>
-            <div>
-              <h4 className="mb-2">University-Specific Scholarships</h4>
-              <p className="text-gray-700">
-                Scholarships offered directly by universities. We help you research and 
-                understand their criteria.
-              </p>
-            </div>
-            <div>
-              <h4 className="mb-2">Field-Specific Scholarships</h4>
-              <p className="text-gray-700">
-                Scholarships for specific fields of study (e.g., STEM, arts, social sciences). 
-                We help you align your academic interests with available opportunities.
-              </p>
+            {/* Track 3 */}
+            <div className="relative flex items-start group">
+              <div className="z-10 flex flex-col items-center" style={{minWidth: '2.5rem'}}>
+                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-700 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">3</span>
+                </div>
+              </div>
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-brand">Country/University/Field-Specific Scholarships</h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">For students targeting scholarships offered by governments, universities, or specific fields of study.</p>
+                  <ul className="text-sm text-gray-700 space-y-1 ml-2">
+                    <li>• Country-specific (e.g., Commonwealth, Fulbright, DAAD, Chevening)</li>
+                    <li>• University-specific</li>
+                    <li>• Field-specific (STEM, arts, social sciences)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+          <p className="text-sm text-gray-600 mt-6 italic">
+            Note: These are examples only. Your roadmap will depend on your starting point, goals, and capacity.
+          </p>
         </div>
       </SectionContainer>
 
-      {/* How Zarvo Helps */}
+      {/* Who This Is For - Modern Card Grid */}
       <SectionContainer>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">How Zarvo Helps</h2>
-          
-          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-6">
-            <h4 className="mb-4">What Scholarship Guidance Includes:</h4>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Awareness: Helping you understand what scholarships exist and which ones you might be eligible for</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Planning: Creating a timeline for when to start preparing, what documents to gather, and what criteria to meet</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Preparation: Guidance on strengthening your profile (academic, extracurricular, test scores, essays)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Realistic assessment: Honest feedback on your chances and what gaps need to be addressed</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Resource sharing: Directing you to official sources, application portals, and credible information</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white border border-gray-300 p-6 rounded-lg">
-            <h4 className="mb-4">What This Does Not Include:</h4>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="mr-3 text-red-500">✗</span>
-                <span>We are not agents. We do not submit applications on your behalf.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-red-500">✗</span>
-                <span>We do not guarantee scholarship acceptance. Outcomes depend on your profile and competition.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-red-500">✗</span>
-                <span>We do not write essays, recommendation letters, or statements of purpose for you.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-red-500">✗</span>
-                <span>We do not have "connections" or "inside access" to scholarship committees.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-red-500">✗</span>
-                <span>We do not charge on a commission basis or take fees upon scholarship approval.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </SectionContainer>
-
-      {/* Realistic Expectations */}
-      <SectionContainer className="bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">Realistic Expectations</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Scholarships are competitive. Many factors influence outcomes—academic performance, 
-            test scores, profile strength, competition levels, and sometimes luck.
-          </p>
-          <div className="space-y-4 text-gray-700">
-            <div className="flex items-start">
-              <span className="mr-3 text-gray-400 font-bold">•</span>
-              <span>
-                <strong>No guarantees:</strong> Even the strongest applicants face rejection. 
-                We help you prepare, but outcomes are not in our control.
-              </span>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="mb-8 text-3xl md:text-4xl font-bold text-brand text-center">Who This Is For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white/80 rounded-2xl border border-brand/10 p-6 flex flex-col items-center text-center shadow-sm">
+              <span className="text-3xl mb-2">🎓</span>
+              <h4 className="font-semibold text-brand mb-1">Students</h4>
+              <p className="text-gray-700 text-sm">Planning to study abroad, concerned about costs</p>
             </div>
-            <div className="flex items-start">
-              <span className="mr-3 text-gray-400 font-bold">•</span>
-              <span>
-                <strong>Time and effort required:</strong> Scholarship preparation takes months, 
-                not weeks. It requires consistent effort.
-              </span>
+            <div className="bg-white/80 rounded-2xl border border-brand/10 p-6 flex flex-col items-center text-center shadow-sm">
+              <span className="text-3xl mb-2">👨‍👩‍👧‍👦</span>
+              <h4 className="font-semibold text-brand mb-1">Families</h4>
+              <p className="text-gray-700 text-sm">Seeking financial aid options for higher education</p>
             </div>
-            <div className="flex items-start">
-              <span className="mr-3 text-gray-400 font-bold">•</span>
-              <span>
-                <strong>Profile matters:</strong> If your academic record or test scores are 
-                weak, scholarships may not be realistic without significant improvement.
-              </span>
+            <div className="bg-white/80 rounded-2xl border border-brand/10 p-6 flex flex-col items-center text-center shadow-sm">
+              <span className="text-3xl mb-2">🔍</span>
+              <h4 className="font-semibold text-brand mb-1">Unaware Students</h4>
+              <p className="text-gray-700 text-sm">Unaware of scholarship opportunities available to them</p>
             </div>
-            <div className="flex items-start">
-              <span className="mr-3 text-gray-400 font-bold">•</span>
-              <span>
-                <strong>No shortcuts:</strong> There are no "hacks" or secret strategies. Only 
-                structured preparation.
-              </span>
+            <div className="bg-white/80 rounded-2xl border border-brand/10 p-6 flex flex-col items-center text-center shadow-sm">
+              <span className="text-3xl mb-2">💡</span>
+              <h4 className="font-semibold text-brand mb-1">Guidance Seekers</h4>
+              <p className="text-gray-700 text-sm">Want structured, honest guidance without agent-like behavior</p>
             </div>
           </div>
-        </div>
-      </SectionContainer>
-
-      {/* Who This Is For */}
-      <SectionContainer>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">Who This Is For</h2>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>Students planning to study abroad but concerned about costs</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>Families seeking financial aid options for higher education</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>Students unaware of scholarship opportunities that may be available to them</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>Those who want structured, honest guidance without agent-like behavior</span>
-            </li>
-          </ul>
         </div>
       </SectionContainer>
 
@@ -227,21 +218,13 @@ export default function Scholarships() {
       </SectionContainer>
 
       {/* How to Get Started */}
-      <SectionContainer>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="mb-6">Interested in Scholarship Guidance?</h2>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            If you are planning for scholarships and want structured, honest guidance, 
-            reach out via the contact form.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block px-6 py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-gray-800 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </SectionContainer>
+      <div className="mt-12">
+        <ReadyToStart
+          heading="Interested in Scholarship Guidance?"
+          message="If you are planning for scholarships and want structured, honest guidance, reach out via the contact form."
+          buttonText="Contact Us"
+        />
+      </div>
     </>
   )
 }
