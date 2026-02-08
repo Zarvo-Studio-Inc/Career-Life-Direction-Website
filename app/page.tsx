@@ -296,7 +296,7 @@ export default function Home() {
           {/* Timeline/Roadmap */}
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical connecting line */}
-            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand-600 to-brand-800"></div>
+            <div className="absolute left-6 md:left-11 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand-600 to-brand-800"></div>
             
             <div className="space-y-12 md:space-y-16">
               {/* Lens 1: Self */}

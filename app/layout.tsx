@@ -24,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="icon" href="/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png" type="image/png" />
+      </head>
       <body className={`${inter.className} bg-gradient-to-br from-brand/5 via-white to-brand/10 relative`}>
         {/* Background Pattern */}
         <div className="fixed inset-0 opacity-30 pointer-events-none">

@@ -32,7 +32,7 @@ export default function Header() {
           {/* Logo / Brand */}
           <div className="flex-shrink-0">
             <Link href="/" className="hover:opacity-80 transition-opacity">
-              <div className="relative w-[140px] md:w-[150px] bg-white">
+              <div className="relative w-[140px] md:w-[150px]">
                 <Image
                   src="/logo.png"
                   alt="Zarvo Studio Logo"

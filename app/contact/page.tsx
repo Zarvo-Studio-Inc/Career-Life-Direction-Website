@@ -158,7 +158,7 @@ export default function Contact() {
       </SectionContainer>
 
       {/* Important Notes - Modern Card */}
-      <SectionContainer>
+      <SectionContainer noPadding={true}>
         <div className="max-w-3xl mx-auto">
           <div className="bg-white/80 rounded-2xl border border-brand/10 p-8 shadow-md">
             <h2 className="mb-6 text-2xl md:text-3xl font-bold text-brand">Before You Reach Out</h2>
