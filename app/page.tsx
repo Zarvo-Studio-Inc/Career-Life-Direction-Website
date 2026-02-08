@@ -252,7 +252,7 @@ export default function Home() {
                 <div className="aspect-square relative">
                   {/* You can replace this src with your preferred ship/ocean gif */}
                   <img 
-                    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazBkdWp3cjk5cW52MWJ3YnNhNzJ5OWR6YmR4aGN6YnF3OGF6ZnZ6NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRuo6sLetdllPAQ/giphy.gif"
+                    src="/ebc85244591669.58178ab5d727c.gif"
                     alt="Ship sailing in ocean - representing journey and direction"
                     className="w-full h-full object-cover"
                   />
