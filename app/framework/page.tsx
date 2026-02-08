@@ -13,8 +13,6 @@ export default function Framework() {
       <HeroSection
         title="The Three-Lens Framework"
         description="Every guidance session at Zarvo follows a structured approach to understanding career and life decisions. We use three lenses to bring clarity."
-        imageSrc="/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png"
-        imageAlt="Decorative background logo"
       />
 
       {/* Overview */}

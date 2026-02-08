@@ -13,8 +13,8 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   description,
-  imageSrc,
-  imageAlt = '',
+  imageSrc = '/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png',
+  imageAlt = 'Decorative background logo',
   className = '',
   children,
 }) => {
