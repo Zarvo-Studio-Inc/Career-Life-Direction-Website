@@ -189,8 +189,10 @@ export default function HowItWorks() {
       </SectionContainer>
 
       {/* Call to Action */}
-      <SectionContainer className="bg-brand">
-        <div className="max-w-3xl mx-auto text-center py-12">
+      <SectionContainer className="bg-brand relative overflow-hidden">
+        {/* Subtle background wave */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none select-none" style={{backgroundImage: 'url(/wave-1.svg)', backgroundSize: 'cover', backgroundPosition: 'center center'}} />
+        <div className="relative max-w-3xl mx-auto text-center py-12 z-10">
           <h2 className="mb-6 text-white text-3xl md:text-4xl font-bold">Ready to Start?</h2>
           <p className="text-brand-50 leading-relaxed mb-8 text-lg md:text-xl">
             If this process feels right for you, reach out via the contact form.<br className="hidden md:block" />
