@@ -1,0 +1,12 @@
+{
+  "appFunctions": {
+    "echoFunction": {
+      "file": "echoFunction.js",
+      "secrets": [],
+      "endpoint": {
+        "path": "echo-function",
+        "method": ["POST"]
+      }
+    }
+  }
+}

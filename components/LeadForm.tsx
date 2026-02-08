@@ -34,27 +34,30 @@ export default function LeadForm({ variant = 'default' }: LeadFormProps) {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Placeholder for API route - to be implemented
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      
-      console.log('Form submitted:', formData)
-      
-      setSubmitStatus('success')
-      
-      // Reset form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        cityCountry: '',
-        userType: '',
-        guidanceAreas: [],
-        message: '',
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          cityCountry: '',
+          userType: '',
+          guidanceAreas: [],
+          message: '',
+        })
+      } else {
+        setSubmitStatus('error')
+      }
     } catch (error) {
-      console.error('Form submission error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -145,10 +148,10 @@ export default function LeadForm({ variant = 'default' }: LeadFormProps) {
             className="w-full px-4 py-2.5 bg-white/95 border border-white/30 rounded-md focus:ring-2 focus:ring-white focus:border-transparent transition-colors text-gray-900"
           >
             <option value="">Select...</option>
-            <option value="school-student">School student</option>
-            <option value="college-student">College student</option>
-            <option value="graduate">Graduate</option>
-            <option value="parent">Parent</option>
+            <option value="School Student">School student</option>
+            <option value="College Student">College student</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Parent">Parent</option>
           </select>
         </div>
 
