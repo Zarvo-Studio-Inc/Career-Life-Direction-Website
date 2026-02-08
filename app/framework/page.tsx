@@ -9,183 +9,157 @@ export default function Framework() {
   return (
     <>
       {/* Hero */}
-      <SectionContainer className="pt-16 md:pt-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="mb-6">The Three-Lens Framework</h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
+      <SectionContainer className="pt-16 md:pt-24 bg-brand relative overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="mb-6 text-white">The Three-Lens Framework</h1>
+          <p className="text-lg text-brand-50 leading-relaxed">
             Every guidance session at Zarvo follows a structured approach to understanding 
             career and life decisions. We use three lenses to bring clarity.
           </p>
         </div>
+        <img 
+          src="/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png" 
+          alt="Decorative background logo"
+          className="pointer-events-none select-none absolute right-0 bottom-0 w-48 md:w-72 opacity-30 z-0 filter brightness-0 invert"
+          aria-hidden="true"
+        />
       </SectionContainer>
 
       {/* Overview */}
-      <SectionContainer>
+      <SectionContainer className="pt-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">How We Approach Guidance</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Career and life decisions are complex. They involve self-awareness, practical 
-            constraints, and long-term planning. To navigate these decisions thoughtfully, 
-            we use three interconnected lenses:
+          <h2 className="mb-6 text-3xl md:text-4xl font-bold text-brand flex items-center justify-center gap-2">
+            <span>How We Approach Guidance</span>
+            <span className="text-2xl md:text-3xl">🌱</span>
+          </h2>
+          <p className="text-brand-800 leading-relaxed mb-8 text-lg md:text-xl text-center">
+            Guidance at Zarvo is a journey of discovery, not a checklist!<br className="hidden md:block" />
+            We believe in making big decisions with clarity, optimism, and a little bit of joy.
           </p>
-          <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg">
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="mr-3 font-semibold">1.</span>
-                <span><strong>Self:</strong> Understanding who you are</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 font-semibold">2.</span>
-                <span><strong>Reality:</strong> Assessing what is possible</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 font-semibold">3.</span>
-                <span><strong>Direction:</strong> Building a responsible roadmap</span>
-              </li>
-            </ul>
-          </div>
         </div>
       </SectionContainer>
 
-      {/* Lens 1: Self */}
-      <SectionContainer className="bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <div className="border-l-4 border-gray-400 pl-6">
-            <h2 className="mb-4">Lens 1: Self</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Understanding aptitude, temperament, interests, and readiness.
-            </p>
-          </div>
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              Before making any career or life decision, you need to understand yourself. 
-              This is not about motivation or inspiration. It is about honest self-assessment.
-            </p>
-            <h4 className="text-lg font-medium mt-6">Questions We Explore:</h4>
-            <ul className="space-y-2 ml-6">
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What are your natural aptitudes? Where do you learn quickly?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What is your temperament? Are you analytical, creative, social, independent?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What do you find genuinely interesting, beyond social validation?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>Are you ready for the demands of the path you are considering?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What are your current knowledge gaps?</span>
-              </li>
-            </ul>
-            <p className="mt-6">
-              The goal is not to discover a hidden passion. The goal is to understand your 
-              strengths, weaknesses, and realistic starting point.
-            </p>
-          </div>
-        </div>
-      </SectionContainer>
-
-      {/* Lens 2: Reality */}
-      <SectionContainer>
-        <div className="max-w-3xl mx-auto">
-          <div className="border-l-4 border-gray-400 pl-6">
-            <h2 className="mb-4">Lens 2: Reality</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Assessing constraints—financial, familial, geographical, and market-based.
-            </p>
-          </div>
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              Self-awareness is important, but it is not enough. You must also understand 
-              the constraints within which you operate. Ignoring reality leads to poor decisions.
-            </p>
-            <h4 className="text-lg font-medium mt-6">Questions We Explore:</h4>
-            <ul className="space-y-2 ml-6">
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What are your financial constraints? What can your family afford?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What are your geographical limitations? Can you relocate?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What does the job market look like in your field of interest?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What are your family's expectations and concerns?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What realistic timelines exist for achieving your goals?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What systemic factors (education system, visa requirements, etc.) affect your path?</span>
-              </li>
-            </ul>
-            <p className="mt-6">
-              Acknowledging constraints is not pessimism. It is realism. Realistic planning 
-              leads to sustainable decisions.
-            </p>
-          </div>
-        </div>
-      </SectionContainer>
-
-      {/* Lens 3: Direction */}
-      <SectionContainer className="bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <div className="border-l-4 border-gray-400 pl-6">
-            <h2 className="mb-4">Lens 3: Direction</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Building a roadmap with responsibility—what you can control, and what you can do now.
-            </p>
-          </div>
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              Once you understand yourself and your constraints, you can build a direction. 
-              This is not a guarantee of success. It is a plan for responsible action.
-            </p>
-            <h4 className="text-lg font-medium mt-6">Questions We Explore:</h4>
-            <ul className="space-y-2 ml-6">
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What actions are within your control right now?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What skills do you need to develop first?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What short-term and long-term goals can you set?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What milestones can you use to measure progress?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>What risks are you willing to take, and what backup plans exist?</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>How will you stay accountable and avoid drift?</span>
-              </li>
-            </ul>
-            <p className="mt-6">
-              Direction is about responsibility. It is about taking ownership of your decisions 
-              and understanding that guidance is not a substitute for action.
-            </p>
+      {/* Modern Timeline for Three Lenses */}
+      <SectionContainer className="pb-16 md:pb-24" noPadding={true}>
+        <div className="relative max-w-3xl mx-auto">
+          {/* Vertical timeline line */}
+          <div className="absolute left-5 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand-600 to-brand-800 rounded-full"></div>
+          <div className="space-y-16">
+            {/* Lens 1: Self */}
+            <div className="relative flex items-start group">
+              {/* Timeline marker */}
+              <div className="z-10 flex flex-col items-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-700 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">1</span>
+                </div>
+                <div className="w-1 flex-1 bg-brand/20"></div>
+              </div>
+              {/* Card */}
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 text-brand">Lens 1: Self</h2>
+                  <div className="mb-4 flex flex-col gap-4">
+                    <div className="flex flex-col gap-4">
+                      <div className="bg-brand/5 border border-brand/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand mb-1 text-base">Overview</h4>
+                        <p className="text-gray-600 text-sm md:text-base">Understanding aptitude, temperament, interests, and readiness.</p>
+                      </div>
+                      <div className="bg-brand-50 border border-brand/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand mb-1 text-base">Key Questions</h4>
+                        <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                          <li>What are your natural aptitudes? Where do you learn quickly?</li>
+                          <li>What is your temperament? Are you analytical, creative, social, independent?</li>
+                          <li>What do you find genuinely interesting, beyond social validation?</li>
+                          <li>Are you ready for the demands of the path you are considering?</li>
+                          <li>What are your current knowledge gaps?</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white border border-brand/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand mb-1 text-base">Takeaway</h4>
+                        <p className="text-gray-600 text-sm md:text-base">The goal is not to discover a hidden passion. The goal is to understand your strengths, weaknesses, and realistic starting point.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Lens 2: Reality */}
+            <div className="relative flex items-start group">
+              {/* Timeline marker */}
+              <div className="z-10 flex flex-col items-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-600 to-brand-800 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">2</span>
+                </div>
+                <div className="w-1 flex-1 bg-brand-600/20"></div>
+              </div>
+              {/* Card */}
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 text-brand-700">Lens 2: Reality</h2>
+                  <div className="mb-4 flex flex-col gap-4">
+                    <div className="flex flex-col gap-4">
+                      <div className="bg-brand-100 border border-brand-600/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-700 mb-1 text-base">Overview</h4>
+                        <p className="text-gray-600 text-sm md:text-base">Assessing constraints—financial, familial, geographical, and market-based.</p>
+                      </div>
+                      <div className="bg-brand-50 border border-brand-600/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-700 mb-1 text-base">Key Questions</h4>
+                        <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                          <li>What are your financial constraints? What can your family afford?</li>
+                          <li>What are your geographical limitations? Can you relocate?</li>
+                          <li>What does the job market look like in your field of interest?</li>
+                          <li>What are your family's expectations and concerns?</li>
+                          <li>What realistic timelines exist for achieving your goals?</li>
+                          <li>What systemic factors (education system, visa requirements, etc.) affect your path?</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white border border-brand-600/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-700 mb-1 text-base">Takeaway</h4>
+                        <p className="text-gray-600 text-sm md:text-base">Acknowledging constraints is not pessimism. It is realism. Realistic planning leads to sustainable decisions.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Lens 3: Direction */}
+            <div className="relative flex items-start group">
+              {/* Timeline marker */}
+              <div className="z-10 flex flex-col items-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-700 to-brand-900 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <span className="text-lg font-bold text-white">3</span>
+                </div>
+              </div>
+              {/* Card */}
+              <div className="ml-16 flex-1">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg p-6 md:p-8 transition-all">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 text-brand-800">Lens 3: Direction</h2>
+                  <div className="mb-4 flex flex-col gap-4">
+                    <div className="flex flex-col gap-4">
+                      <div className="bg-brand-50 border border-brand-800/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-800 mb-1 text-base">Overview</h4>
+                        <p className="text-gray-600 text-sm md:text-base">Building a roadmap with responsibility—what you can control, and what you can do now.</p>
+                      </div>
+                      <div className="bg-brand-100 border border-brand-800/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-800 mb-1 text-base">Key Questions</h4>
+                        <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                          <li>What actions are within your control right now?</li>
+                          <li>What skills do you need to develop first?</li>
+                          <li>What short-term and long-term goals can you set?</li>
+                          <li>What milestones can you use to measure progress?</li>
+                          <li>What risks are you willing to take, and what backup plans exist?</li>
+                          <li>How will you stay accountable and avoid drift?</li>
+                        </ul>
+                      </div>
+                      <div className="bg-white border border-brand-800/10 rounded-xl p-4 flex flex-col w-full">
+                        <h4 className="font-semibold text-brand-800 mb-1 text-base">Takeaway</h4>
+                        <p className="text-gray-600 text-sm md:text-base">Direction is about responsibility. It is about taking ownership of your decisions and understanding that guidance is not a substitute for action.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </SectionContainer>
