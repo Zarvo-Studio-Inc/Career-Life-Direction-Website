@@ -1,4 +1,5 @@
 import SectionContainer from '@/components/SectionContainer'
+import HeroSection from '@/components/HeroSection'
 
 export const metadata = {
   title: 'Framework - Zarvo Studio',
@@ -9,21 +10,12 @@ export default function Framework() {
   return (
     <>
       {/* Hero */}
-      <SectionContainer className="pt-16 md:pt-24 bg-brand relative overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="mb-6 text-white">The Three-Lens Framework</h1>
-          <p className="text-lg text-brand-50 leading-relaxed">
-            Every guidance session at Zarvo follows a structured approach to understanding 
-            career and life decisions. We use three lenses to bring clarity.
-          </p>
-        </div>
-        <img 
-          src="/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png" 
-          alt="Decorative background logo"
-          className="pointer-events-none select-none absolute right-0 bottom-0 w-48 md:w-72 opacity-30 z-0 filter brightness-0 invert"
-          aria-hidden="true"
-        />
-      </SectionContainer>
+      <HeroSection
+        title="The Three-Lens Framework"
+        description="Every guidance session at Zarvo follows a structured approach to understanding career and life decisions. We use three lenses to bring clarity."
+        imageSrc="/blue_minimal_sea_logıstıcs_logo__1_-removebg-preview.png"
+        imageAlt="Decorative background logo"
+      />
 
       {/* Overview */}
       <SectionContainer className="pt-12">
@@ -166,49 +158,66 @@ export default function Framework() {
 
       {/* How the Lenses Work Together */}
       <SectionContainer>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="mb-6">How the Lenses Work Together</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            These three lenses are not separate steps. They inform each other:
-          </p>
-          <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>
-                <strong>Self</strong> tells you what you might be suited for.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>
-                <strong>Reality</strong> tells you what is feasible given your circumstances.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-3">•</span>
-              <span>
-                <strong>Direction</strong> tells you what actions to take next.
-              </span>
-            </li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed mt-6">
-            Together, they provide a structured way to think through complex decisions 
-            without oversimplifying or overpromising.
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="mb-8 text-3xl md:text-4xl font-bold text-brand text-center">How the Lenses Work Together</h2>
+          <div className="flex flex-col items-center">
+            {/* Modern horizontal stepper/timeline */}
+            <div className="flex flex-row items-center justify-center w-full gap-0 md:gap-8 relative mb-8">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center flex-1 min-w-[120px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand to-brand-600 flex items-center justify-center shadow-lg mb-2">
+                  <span className="text-white text-2xl">🧑‍🎓</span>
+                </div>
+                <span className="font-semibold text-brand mt-1">Self</span>
+                <span className="text-xs text-gray-500 text-center mt-1">What you might be suited for</span>
+              </div>
+              {/* Line 1 */}
+              <div className="hidden md:block h-1 flex-1 bg-gradient-to-r from-brand-400 via-brand-600 to-brand-700 mx-2 rounded-full"></div>
+              {/* Step 2 */}
+              <div className="flex flex-col items-center flex-1 min-w-[120px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 flex items-center justify-center shadow-lg mb-2">
+                  <span className="text-white text-2xl">🌍</span>
+                </div>
+                <span className="font-semibold text-brand-700 mt-1">Reality</span>
+                <span className="text-xs text-gray-500 text-center mt-1">What is feasible for you</span>
+              </div>
+              {/* Line 2 */}
+              <div className="hidden md:block h-1 flex-1 bg-gradient-to-r from-brand-700 via-brand-800 to-brand-900 mx-2 rounded-full"></div>
+              {/* Step 3 */}
+              <div className="flex flex-col items-center flex-1 min-w-[120px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-800 to-brand-900 flex items-center justify-center shadow-lg mb-2">
+                  <span className="text-white text-2xl">🧭</span>
+                </div>
+                <span className="font-semibold text-brand-800 mt-1">Direction</span>
+                <span className="text-xs text-gray-500 text-center mt-1">What actions to take next</span>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed text-center max-w-2xl">
+              These three lenses are not separate steps—they inform each other. Together, they provide a structured way to think through complex decisions without oversimplifying or overpromising.
+            </p>
+              <div className="mt-10 flex flex-col items-center w-full">
+                {/* Top Decorative Wave */}
+                <div className="w-full -mb-2" style={{maxWidth: '1100px'}}>
+                  <img src="/wave-2.svg" alt="Decorative wave" className="w-full h-12 object-cover" style={{objectPosition: 'top'}} />
+                </div>
+                <div className="bg-brand rounded-2xl p-8 md:p-12 shadow-lg w-full" style={{maxWidth: '900px'}}>
+                  <h3 className="mb-2 text-2xl md:text-3xl font-bold text-white text-center tracking-tight">Clarity Through Structure</h3>
+                  <div className="h-1 w-16 bg-white/40 rounded-full mb-4 mx-auto"></div>
+                  <p className="text-brand-50 leading-relaxed text-center text-lg md:text-xl">
+                    The Three-Lens Framework is not a formula for success. It is a tool for clarity.<br className="hidden md:block" />
+                    It helps you think systematically about where you are, what is possible, and what you can do next.
+                  </p>
+                </div>
+                {/* Bottom Decorative Wave (flipped) */}
+                <div className="w-full -mt-2" style={{maxWidth: '1100px'}}>
+                  <img src="/wave-2.svg" alt="Decorative wave" className="w-full h-12 object-cover rotate-180" style={{objectPosition: 'bottom'}} />
+                </div>
+              </div>
+          </div>
         </div>
       </SectionContainer>
 
       {/* Closing Statement */}
-      <SectionContainer className="bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="mb-4">Clarity Through Structure</h3>
-          <p className="text-gray-700 leading-relaxed">
-            The Three-Lens Framework is not a formula for success. It is a tool for clarity. 
-            It helps you think systematically about where you are, what is possible, and what 
-            you can do next.
-          </p>
-        </div>
-      </SectionContainer>
     </>
   )
 }
