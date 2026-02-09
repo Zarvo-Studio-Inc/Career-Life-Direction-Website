@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             full_address: cityCountry,
             profession: userType,
             message,
-            guidance_areas: Array.isArray(guidanceAreas) ? guidanceAreas.join(';') : guidanceAreas,
+            guidance_area: Array.isArray(guidanceAreas) ? guidanceAreas.join(';') : guidanceAreas,
           },
         }),
     })
