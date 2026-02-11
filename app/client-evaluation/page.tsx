@@ -63,13 +63,13 @@ export default function ClientEvaluationPage() {
         const input = el as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
         const name = input.closest('.field')?.querySelector('label')?.textContent?.replace(/[:：]/g, '').trim() || input.name || ''
         if (!name || !(name in data)) return
-        if (input.type === 'checkbox') {
-          input.checked = data[name].includes(input.nextSibling?.textContent?.trim() || input.value || 'Yes')
-        } else if (input.type === 'radio') {
-          input.checked = data[name][0] === input.value
-        } else {
-          input.value = data[name][0] || ''
-        }
+          if (input.type === 'checkbox') {
+            (input as HTMLInputElement).checked = data[name].includes(input.nextSibling?.textContent?.trim() || input.value || 'Yes')
+          } else if (input.type === 'radio') {
+            (input as HTMLInputElement).checked = data[name][0] === input.value
+          } else {
+            input.value = data[name][0] || ''
+          }
       })
     }
     reader.readAsText(file)
