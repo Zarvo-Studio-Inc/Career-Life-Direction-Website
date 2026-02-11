@@ -57,6 +57,7 @@ export default function ClientEvaluationPage() {
       })
       // Fill form fields
       const form = formRef.current
+      if (!form) return
       const fields = form.querySelectorAll('input, textarea, select')
       fields.forEach((el) => {
         const input = el as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
